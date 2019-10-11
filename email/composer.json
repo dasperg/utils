@@ -1,0 +1,6 @@
+{
+    "name": "gasper/utils-email",
+    "require": {
+        "phpmailer/phpmailer": "^6.1"
+    }
+}
