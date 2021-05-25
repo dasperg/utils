@@ -13,3 +13,16 @@ if (!function_exists('dd')) {
         die();
     }
 }
+
+/**
+ * Add timestamp to query to prevent caching file after change
+ *
+ * @param $path - relative path
+ * @return string
+ */
+if (!function_exists('asset')) {
+    function asset($path)
+    {
+        return $path . "?t=" . filemtime(__DIR__ . '/../public' . $path);
+    }
+}
